@@ -20,3 +20,4 @@ get_all_comments           = originOPC.req_all_comments    # 最新全部评论
 get_hot_comments           = originOPC.req_hotComment      # 精彩评论
 search                     = originOPC.search              # 搜索 
 search_suggest             = originOPC.search_suggest      # 搜索建议
+get_playlist               = originOPC.get_playlist        # 获取playlist

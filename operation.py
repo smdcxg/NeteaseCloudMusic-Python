@@ -12,7 +12,9 @@ class OPC(object):    # 网易云音乐操作类
         #self.headers = HEADERS.copy()     # 请求头
 
         self.cellphone_link = "http://music.163.com/weapi/login/cellphone?csrf_token="
-        self.playlist_link = PLAYLIST_LINK                           # 发现音乐-歌单链接
+        self.discover_playlist_link = DISCOVER_PLAYLIST_LINK         # 发现音乐-歌单链接
+        self.playlist_link = PLAYLIST_LINK                           # 歌单列表
+        self.toplist_link = TOPLIST_LINK                             # 网易云飙升榜
         self.comment_link = COMMENTS_LINK                            # 评论链接
         self.search_link = SEARCH_LINK                               # 搜索链接
         self.search_suggest_link = SEARCH_SUGGEST_LINK               # 搜索建议链接
@@ -23,6 +25,8 @@ class OPC(object):    # 网易云音乐操作类
         self.cellphone_login_param = CELLPHONE_LOGIN_PARAM
         self.search_param = SEARCH_PARAM
         self.search_suggest_param = SEARCH_SUGGEST_PARAM
+        self.discover_classif = DISCOVER
+        self.discover_classif_info = DISCOVER_INFO
 
         self.comments_type = ["A_PL_0","R_SO_4"]  # 0-歌单评论列表   1-歌曲评论列表
         self.csrf_token = ""    # token
@@ -40,6 +44,9 @@ class OPC(object):    # 网易云音乐操作类
         获取网易云评论
     '''
     def get_discover(self, classif=None):    # 获取网易云音乐 发现音乐-歌单 歌单id
+        raise NotImplementedError()
+
+    def get_playlist(self, playListID=None):
         raise NotImplementedError()
 
     def url(self, comments_type=None, mid=None):
