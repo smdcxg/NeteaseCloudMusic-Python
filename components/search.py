@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from ..core import *
-
-def load_search(obj):
+def load(obj):
     obj.search = search
     obj.search_suggest = search_suggest
 def search(self, condition=None):

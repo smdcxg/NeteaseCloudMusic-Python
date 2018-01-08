@@ -2,9 +2,8 @@
 # -*- coding: utf-8 -*-
 
 import hashlib
-from ..core import *
 
-def load_login(obj):
+def load(obj):
     obj.login = login
 
 def login(self, phone=None, passWord=None, rememberLogin=True):

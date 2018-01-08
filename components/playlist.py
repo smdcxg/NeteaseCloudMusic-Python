@@ -1,10 +1,8 @@
 
-import re
+import re, os, sys
 import json
-from ..core import *
-
-
-def load_playlist(obj):
+from core import *
+def load(obj):
     obj.get_playlist      = get_playlist
 
 

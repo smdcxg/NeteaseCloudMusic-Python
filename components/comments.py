@@ -6,9 +6,8 @@ import pymongo
 import json
 import os
 from pymongo import MongoClient
-from ..core import *
 
-def load_comments(obj):
+def load(obj):
     obj.url                   = url
     obj.req_comments          = req_comments
     obj.req_all_comments      = req_all_comments
