@@ -3,6 +3,9 @@
 
 import requests
 
+import os, sys
+sys.path.append(os.path.split(os.path.realpath(__file__))[0])
+
 from .config import *
 from .components import load_components
 from .drive import load_drive
@@ -12,21 +15,18 @@ class OPC(object):    # 网易云音乐操作类
         #self.headers = HEADERS.copy()     # 请求头
 
         self.cellphone_link = "http://music.163.com/weapi/login/cellphone?csrf_token="
-        self.discover_playlist_link = DISCOVER_PLAYLIST_LINK         # 发现音乐-歌单链接
+        self.discover_classif = DISCOVER.copy()
+
+        self.private_fm_link = PRIVATE_FM_LINK
+
         self.playlist_link = PLAYLIST_LINK                           # 歌单列表
-        self.toplist_link = TOPLIST_LINK                             # 网易云飙升榜
         self.comment_link = COMMENTS_LINK                            # 评论链接
         self.search_link = SEARCH_LINK                               # 搜索链接
         self.search_suggest_link = SEARCH_SUGGEST_LINK               # 搜索建议链接
-        self.palylist_param = PLAYLIST_PARAM.copy()
-        self.playlist_param_limit_size = PLAYLIST_PARAM_LIMIT_SIZE
         self.comment_param = COMMENTS_PARAM.copy()
-        self.comment_param_limit_size = COMMENTS_PARAM_LIMIT_SIZE
-        self.cellphone_login_param = CELLPHONE_LOGIN_PARAM
-        self.search_param = SEARCH_PARAM
-        self.search_suggest_param = SEARCH_SUGGEST_PARAM
-        self.discover_classif = DISCOVER
-        self.discover_classif_info = DISCOVER_INFO
+        self.cellphone_login_param = CELLPHONE_LOGIN_PARAM.copy()
+        self.search_param = SEARCH_PARAM.copy()
+        self.search_suggest_param = SEARCH_SUGGEST_PARAM.copy()
 
         self.comments_type = ["A_PL_0","R_SO_4"]  # 0-歌单评论列表   1-歌曲评论列表
         self.csrf_token = ""    # token
@@ -37,13 +37,14 @@ class OPC(object):    # 网易云音乐操作类
         '''
     ''' Sing In-Operation
     '''
+
     def login(self, phone=None, passWord=None, rememberLogin=True):
         raise NotImplementedError()
 
     ''' Comment-Operation
         获取网易云评论
     '''
-    def get_discover(self, classif=None):    # 获取网易云音乐 发现音乐-歌单 歌单id
+    def get_discover(self, classifIndex=None, toplistIndex=0):    # 获取网易云音乐 发现音乐-歌单
         raise NotImplementedError()
 
     def get_playlist(self, playListID=None):
@@ -74,6 +75,9 @@ class OPC(object):    # 网易云音乐操作类
         raise NotImplementedError()
     
     def get(self, url=None, dheaders=None, dparams=None):    # dget
+        raise NotImplementedError()
+
+    def get_privateFM(self): # 私人FM
         raise NotImplementedError()
        
 load_components(OPC)
