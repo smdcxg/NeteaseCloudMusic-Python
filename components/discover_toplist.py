@@ -4,7 +4,7 @@
 def load(obj):
     obj.discover_toplist = toplist
 
-def toplist(self, params={}):
+def toplist(self, idx=0, limit=30, offset=0):
     url = "http://music.163.com/weapi/v3/playlist/detail"
     types = [
         ["云音乐新歌榜", "3779629"],
@@ -32,11 +32,8 @@ def toplist(self, params={}):
         ["云音乐ACG音乐榜", "71385702"],
         ["云音乐嘻哈榜", "991319590"]
     ]
-    idx = types[params.idx][1] if 'idx' in params.keys() else types[0][1]
-    limit = params.limit if 'limit' in params.keys() else 30
-    offset = params.offset if 'offset' in params.keys() else 0
     real_params = {
-        'id':idx,
+        'id':types[idx][1],
         'limit': limit,
         'offset': offset,
         'total': True,
