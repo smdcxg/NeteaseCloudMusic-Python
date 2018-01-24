@@ -23,6 +23,7 @@ class RequestHttp(object):
             self.s = requests
 
     def post(self, url=None, dheaders=None, dparams=None):
+        self.headers['Referer'] = url
         payload = get_post_param(dparams)
         req = self.s.post(url, headers=(dheaders if dheaders != None else self.headers), params = payload)
         data = {"ret":""}    # ReturnValue 采用回填数据方式
@@ -30,6 +31,7 @@ class RequestHttp(object):
         return data["ret"]
     
     def get(self, url=None, dheaders=None, dparams=None):
+        self.headers['Referer'] = url
         req = self.s.get(url, headers=(dheaders if dheaders != None else self.headers), params = dparams)
         return req
      
