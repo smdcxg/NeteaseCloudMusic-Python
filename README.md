@@ -47,8 +47,8 @@ playlist(order='hot', cat='全部', limit='50', offset=0)
 **说明**：获取网易云 发现音乐-歌单 <br>
 **地址**：`http://music.163.com/weapi/playlist/list`<br />
 **参数**：<br>
-`order`：歌单类别（最热=hot    最新=new）<br />
-`cat`：<br />
+`order`：歌单类别（最热=hot    最新=new）<br>
+`cat`：
 ```**语种** >> 华语| 欧美| 日语| 韩语| 粤语| 小语种|
 
 **风格** >> 流行| 摇滚| 民谣| 电子| 舞曲| 说唱| 轻音乐| 爵士| 乡村| R&B/Soul| 古典| 民族| 英伦| 金属| 朋克| 蓝调| 雷鬼| 世界音乐| 拉丁| 另类/独立| New Age| 古风| 后摇| Bossa Nova|
