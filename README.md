@@ -21,7 +21,7 @@
 ```python
 req_comments(music_id, page = 1, page_num = 20, comments_type = 0)
 ```
-**参数**：
+**参数**：<br>
 &ensp;&ensp;&ensp;&ensp;&ensp;**`music_id`**：id   （音乐填写音乐id， 评论填写评论id）<br>
 &ensp;&ensp;&ensp;&ensp;&ensp;**`page`**：第几页<br>
 &ensp;&ensp;&ensp;&ensp;&ensp;**`page_num`**：每页数量<br>
@@ -33,8 +33,8 @@ req_comments(music_id, page = 1, page_num = 20, comments_type = 0)
 ```python
 req_all_comments(music_id, page_num = 100, comments_type = 0)
 ```
-**说明**：迭代进行
-**参数**：
+**说明**：迭代进行<br>
+**参数**：<br>
 &ensp;&ensp;&ensp;&ensp;&ensp;**`music_id`**：id    （音乐填写音乐id， 评论填写评论id）<br>
 &ensp;&ensp;&ensp;&ensp;&ensp;**`page_num`**：每次迭代的数量<br>
 &ensp;&ensp;&ensp;&ensp;&ensp;**`comments_type `**：0/1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 - 音乐评论     1 - 歌单评论<br>
@@ -110,8 +110,8 @@ toplist(idx=0, limit=30, offset=0)
 discovery_simiSong(sid=0)
 ```
 **说明**：获取跟当前歌曲（sid）相似的音乐<br>
-**地址**：`http://music.163.com/weapi/v1/discovery/simiSong`
-**参数**：
+**地址**：`http://music.163.com/weapi/v1/discovery/simiSong`<br>
+**参数**：<br>
 &ensp;&ensp;&ensp;&ensp;&ensp;**`sid`**：音乐id
 
 <br>
