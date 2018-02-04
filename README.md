@@ -21,7 +21,7 @@
 ```python
 req_comments(music_id, page = 1, page_num = 20, comments_type = 0)
 ```
-**参数**：<br>
+**参数**：
 &ensp;&ensp;&ensp;&ensp;&ensp;**`music_id`**：id   （音乐填写音乐id， 评论填写评论id）<br>
 &ensp;&ensp;&ensp;&ensp;&ensp;**`page`**：第几页<br>
 &ensp;&ensp;&ensp;&ensp;&ensp;**`page_num`**：每页数量<br>
@@ -33,8 +33,8 @@ req_comments(music_id, page = 1, page_num = 20, comments_type = 0)
 ```python
 req_all_comments(music_id, page_num = 100, comments_type = 0)
 ```
-**说明**：迭代进行<br>
-**参数**：<br>
+**说明**：迭代进行
+**参数**：
 &ensp;&ensp;&ensp;&ensp;&ensp;**`music_id`**：id    （音乐填写音乐id， 评论填写评论id）<br>
 &ensp;&ensp;&ensp;&ensp;&ensp;**`page_num`**：每次迭代的数量<br>
 &ensp;&ensp;&ensp;&ensp;&ensp;**`comments_type `**：0/1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 - 音乐评论     1 - 歌单评论<br>
@@ -116,4 +116,67 @@ discovery_simiSong(sid=0)
 
 <br>
 
-### 
+### 获取最近 5 个听了这首歌的用户
+```python
+discovery_simiUser(id)
+```
+**说明**：获取最近 5 个听了这首歌的用户（需要登录）<br>
+**地址**：`http://music.163.com/weapi/discovery/simiUser`<br>
+**参数**：<br>
+&ensp;&ensp;&ensp;&ensp;&ensp;**`sid`**：音乐id<br>
+
+<br>
+
+### 获取每日推荐歌曲
+```python
+recommend_songs()
+```
+**说明**：获取每日推荐歌单（需要登录）
+
+<br>
+
+### 喜欢音乐
+```python
+like(id, like=True, alg='itembased', time=25)
+```
+**说明**：音乐加入到 创建的歌单-我喜欢的音乐<br>
+**地址**：`http://music.163.com/weapi/radio/like`<br>
+**参数**：<br>
+&ensp;&ensp;&ensp;&ensp;&ensp;**`id`**：音乐id<br>
+
+<br>
+
+### 获取用户详情
+```python
+user_detail(uid=0)
+```
+**说明**：获取用户的详细信息<br>
+**地址**：`http://music.163.com/weapi/v1/user/detail/`<br>
+**参数**：
+&ensp;&ensp;&ensp;&ensp;&ensp;**`uid`**：用户id<br>
+
+<br>
+
+### 获取用户关注列表
+```python
+user_getfollows(uid=0, offset=0, limit=30)
+```
+**说明**：获取用户关注列表<br>
+**地址**：`http://music.163.com/weapi/user/getfollows/`<br>
+**参数**：<br>
+&ensp;&ensp;&ensp;&ensp;&ensp;**`uid`**：用户id<br>
+&ensp;&ensp;&ensp;&ensp;&ensp;**`limit`**：数量<br>
+&ensp;&ensp;&ensp;&ensp;&ensp;**`offset`**：起始位置<br>
+
+<br>
+
+### 获取用户粉丝列表
+```python
+user_getfolloweds(uid=0, offset=0, limit=30)
+```
+**说明**：获取用户粉丝列表<br>
+**地址**：`http://music.163.com/weapi/user/getfolloweds/`<br>
+**参数**：<br>
+&ensp;&ensp;&ensp;&ensp;&ensp;**`uid`**：用户id<br>
+&ensp;&ensp;&ensp;&ensp;&ensp;**`limit`**：数量<br>
+&ensp;&ensp;&ensp;&ensp;&ensp;**`offset`**：起始位置<br>
