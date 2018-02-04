@@ -1,4 +1,5 @@
 
+
 ＃NeteaseCloudMusic-python
 <br />
 网易云音乐python版Api
@@ -168,3 +169,11 @@ user_getfolloweds(uid=0, offset=0, limit=30)
 &ensp;&ensp;&ensp;&ensp;&ensp;**`uid`**：用户id<br>
 &ensp;&ensp;&ensp;&ensp;&ensp;**`limit`**：数量<br>
 &ensp;&ensp;&ensp;&ensp;&ensp;**`offset`**：起始位置<br>
+
+<br>
+
+### 获取单个用户动态
+**说明**：获取指定uid的动态<br>
+**地址**：`http://music.163.com/weapi/event/get/`<br>
+**参数**：<br>
+&ensp;&ensp;&ensp;&ensp;&ensp;**`uid`**：用户id<br>
